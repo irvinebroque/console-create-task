@@ -10,6 +10,9 @@
 
 export default {
 	async fetch(request, env, ctx) {
+		const task = console.createTask('foo');
+    const logStuff = () => console.log('stuff');
+    task.run(logStuff);
 		return new Response('Hello World!');
 	},
 };
